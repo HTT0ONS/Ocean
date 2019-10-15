@@ -1,0 +1,61 @@
+{{ http.4 |safe }}
+{{ http.3 |safe }}
+  <div class="navBar">
+    <ul class="nav clearfix">
+      {{ http.0| safe }}
+    </ul>
+  </div>
+  <script type="text/javascript">
+ $(function(){
+	  $('div.navBar>ul>li').hover(function(){
+		  $(this).addClass('here');
+		  $(this).siblings();
+		  },function(){
+			   $(this).removeClass('here');	  
+			  })
+			  			  
+	 })
+  document.getElementById("m1").className='current';
+
+	</script> 
+</div>
+
+<div class="mainer"> 
+  <!--banner-->
+  <div id="ifocus">
+    <div id="ifocus_pic">
+      <div id="ifocus_piclist">
+          <ul>
+           <li><a href="#" style="background:url(/static/images/b2.jpg) no-repeat center center;width:100%;"></a></li>
+		   <li><a href="#" style="background:url(/static/images/b1.jpg) no-repeat center center;width:100%;"></a></li>
+		    
+		  </ul>
+      
+      </div>
+    </div>
+    <div id="ifocus_btn">
+      <ul>
+      <li class=""><img src="/static/images/b2.jpg" width="200" height="47"></li>
+	  <li class=""><img src="/static/images/b1.jpg" width="200" height="47"></li>
+	   
+	  </ul>
+    </div>
+  </div>
+  <script type="text/javascript">jQuery("#ifocus").slide({ titCell:"#ifocus_btn li", mainCell:"#ifocus_piclist ul",effect:"top", delayTime:200, autoPlay:true,triggerTime:0});</script> 
+
+  
+
+    <div class="public_title">
+        <div class="m2pos">
+            <div class="m2posName">联系我们/CONTACT US</div>
+            <div class="m2pos_adr"><a class="m2pos_a" href="/">首页</a><a class="m2pos_a" href="/">联系我们</a></div>
+        </div>
+    </div>
+    
+
+  <!--about-->
+        {{ ok |safe }}
+
+        {{ http.1| safe }}
+</body>
+</html>

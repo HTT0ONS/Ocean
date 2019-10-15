@@ -1,0 +1,73 @@
+{{ http.4 |safe }}
+{{ http.3 |safe }}
+  <div class="navBar">
+    <ul class="nav clearfix">
+      {{ http.0| safe }}
+    </ul>
+  </div>
+  <script type="text/javascript">
+ $(function(){
+	  $('div.navBar>ul>li').hover(function(){
+		  $(this).addClass('here');
+		  $(this).siblings();
+		  },function(){
+			   $(this).removeClass('here');	  
+			  })
+			  			  
+	 })
+  document.getElementById("m1").className='current';
+
+	</script> 
+</div>
+
+<div class="mainer"> 
+  <!--banner-->
+  <div id="ifocus">
+    <div id="ifocus_pic">
+      <div id="ifocus_piclist">
+          <ul>
+           <li><a href="#" style="background:url(/static/images/b2.jpg) no-repeat center center;width:100%;"></a></li>
+		   <li><a href="#" style="background:url(/static/images/b1.jpg) no-repeat center center;width:100%;"></a></li>
+		  </ul>
+      
+      </div>
+    </div>
+    <div id="ifocus_btn">
+      <ul>
+      <li class=""><img src="/static/images/b2.jpg" width="200" height="47"></li>
+	  <li class=""><img src="/static/images/b1.jpg" width="200" height="47"></li>
+	   
+	  </ul>
+    </div>
+  </div>
+  <script type="text/javascript">jQuery("#ifocus").slide({ titCell:"#ifocus_btn li", mainCell:"#ifocus_piclist ul",effect:"top", delayTime:200, autoPlay:true,triggerTime:0});</script> 
+  <!--product-->
+  <div class="in_product dw">
+    <div class="headline"><span><img src="/static/images/titlebg.jpg" alt="">产品中心 <b>PRODUCTS</b></span></div>
+    <div class="game163">
+      <div class="smallScroll"> <a class="sPrev" href="javascript:void(0)">←</a>
+        <div class="smallImg">
+          <ul>
+              {% for i in count %}
+              <li><a href="#"><img src="/static/images/pro1.jpg" width="250" ><span>宏鑫锻造盘头</span></a></li>
+              {% endfor %}
+          </ul>
+        </div>
+        <a class="sNext" href="javascript:void(0)">→</a> </div>
+    </div>
+    <script type="text/javascript">jQuery(".game163").slide({ titCell:".smallImg li", mainCell:".bigImg", effect:"fold", autoPlay:true,delayTime:200,startFun:function(i,p){if(i==0){ jQuery(".game163 .sPrev").click() } else if( i%4==0 ){ jQuery(".game163 .sNext").click()}
+}
+		});
+		jQuery(".game163 .smallScroll").slide({ mainCell:"ul",delayTime:200,vis:4,scroll:1,effect:"left",autoPage:true,prevCell:".sPrev",nextCell:".sNext",pnLoop:false });
+	</script> 
+  </div>
+  
+
+  <!--about-->
+{{ ok | safe }}
+        {{ http.1| safe }}
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+{{ http.4 |safe }}
+{{ http.3 |safe }}
+  <div class="navBar">
+    <ul class="nav clearfix">
+
+      {{ http.0| safe }}
+    </ul>
+  </div>
+  <script type="text/javascript">
+ $(function(){
+	  $('div.navBar>ul>li').hover(function(){
+		  $(this).addClass('here');
+		  $(this).siblings();
+		  },function(){
+			   $(this).removeClass('here');	  
+			  })
+			  			  
+	 })
+  document.getElementById("m1").className='current';
+
+	</script>
+</div>
+<div class="mainer">
+  <!--banner-->
+  <div id="ifocus">
+    <div id="ifocus_pic">
+      <div id="ifocus_piclist">
+        <ul>
+          <li><a href="#" style="background:url(/static/images/b2.jpg) no-repeat center center;width:100%;"></a></li>
+          <li><a href="#" style="background:url(/static/images/b1.jpg) no-repeat center center;width:100%;"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="ifocus_btn">
+      <ul>
+        <li class=""><img src="/static/images/b2.jpg" width="200" height="47"></li>
+        <li class=""><img src="/static/images/b1.jpg" width="200" height="47"></li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">jQuery("#ifocus").slide({ titCell:"#ifocus_btn li", mainCell:"#ifocus_piclist ul",effect:"top", delayTime:200, autoPlay:true,triggerTime:0});</script>
+  <div class="public_title">
+    <div class="m2pos">
+      <div class="m2posName">产品展示/PRODUCTS</div>
+      <div class="m2pos_adr"><a class="m2pos_a" href="/">产品展示</a><a class="m2pos_a" href="/">锻造绞线盘</a></div>
+    </div>
+  </div>
+  <!--about-->
+  <div class="conbg">
+    <div class="dw">
+      <div class="pmenu">
+        <ul>
+          {{ http.2 | safe }}
+        </ul>
+      </div>
+      <div class="content">
+        <div class="article_img fl"> <img src="/static/images/pro2.jpg"/> </div>
+        <div class="article_right fr">
+          <div class="article_title">
+            <h2><span>产品名称：</span>锻造绞线盘</h2>
+            <a class="btn" href="/">询价</a> </div>
+          <div class="c"></div>
+          <div class="article_list">
+            <p><span>产品参数信息：</span>30-21-260</p>
+            <p><span>产品应用领域：</span>经编机配件</p>
+            <p><span>宏鑫锻造盘头优势：</span> <br >
+              法兰： <br >
+              ——采用高强度的铝合金材料，经高压锻造程序，因此具有良好的刚性和耐久性。 <br >
+              芯轴： <br >
+              ——采用高强度的铝合金材料，精密挤压成形，具有很高的强度和精确度。 <br >
+              焊接： <br >
+              ——采用一种惰性保护气氛的自动焊接方法，进行高精密度的焊接。 <br >
+              ——由于动平衡的功用，即使高速转动，也能与经编机保持良好的相容性。 <br >
+              ——经过硬质阳极氧化处理，完全防止腐蚀与表面刮痕。 <br >
+              ——甚至使用几年之后，亦保持其耐用性于精密度。 </p>
+          </div>
+        </div>
+      </div>
+      <div class="c"></div>
+      <div class="content">
+        <p style="margin-top: 10px;text-align:center"><img src="/static/images/1.jpg" /></p>
+        <p style="margin-top: 10px;text-align:center"><img src="/static/images/2.jpg" /></p>
+      </div>
+      <div class="c"></div>
+    </div>
+  </div>
+</div>
+{{ http.1| safe }}
+</body>
+</html>

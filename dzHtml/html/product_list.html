@@ -1,0 +1,97 @@
+{{ http.4 |safe }}
+{{ http.3 |safe }}
+  <div class="navBar">
+    <ul class="nav clearfix">
+      {{ http.0| safe }}
+    </ul>
+  </div>
+  <script type="text/javascript">
+ $(function(){
+	  $('div.navBar>ul>li').hover(function(){
+		  $(this).addClass('here');
+		  $(this).siblings();
+		  },function(){
+			   $(this).removeClass('here');	  
+			  })
+			  			  
+	 })
+  document.getElementById("m1").className='current';
+
+	</script> 
+</div>
+
+<div class="mainer"> 
+  <!--banner-->
+  <div id="ifocus">
+    <div id="ifocus_pic">
+      <div id="ifocus_piclist">
+          <ul>
+           <li><a href="#" style="background:url(/static/images/b2.jpg) no-repeat center center;width:100%;"></a></li>
+		   <li><a href="#" style="background:url(/static/images/b1.jpg) no-repeat center center;width:100%;"></a></li>
+		    
+		  </ul>
+      
+      </div>
+    </div>
+    <div id="ifocus_btn">
+      <ul>
+      <li class=""><img src="/static/images/b2.jpg" width="200" height="47"></li>
+	  <li class=""><img src="/static/images/b1.jpg" width="200" height="47"></li>
+	   
+	  </ul>
+    </div>
+  </div>
+  <script type="text/javascript">jQuery("#ifocus").slide({ titCell:"#ifocus_btn li", mainCell:"#ifocus_piclist ul",effect:"top", delayTime:200, autoPlay:true,triggerTime:0});</script> 
+
+  
+
+    <div class="public_title">
+        <div class="m2pos">
+            <div class="m2posName">产品展示/PRODUCTS</div>
+            <div class="m2pos_adr"><a class="m2pos_a" href="/">产品展示</a><a class="m2pos_a" href="/">锻造绞线盘</a></div>
+        </div>
+    </div>
+    
+
+  <!--about-->
+<div class="conbg">
+  <div class="dw">
+     <div class="pmenu">
+        <ul>
+            {{ http.2 | safe }}
+
+        </ul>
+    </div>
+    <div class="content">
+	  <div class="pro_list">
+        <ul>
+            {% for i in http %}
+            <li><a href="product_article.html" class="pro_a1">
+			    <div class="pro_img">
+			     <img src="/static/images/pro1.jpg" width="270" height="270" /><i class="pro_lay"></i>
+                </div>
+                <div class="pro_t1">锻造绞线盘</div>
+                <p>法兰：——采用高强度的铝合金材料，经高压锻造程序，因此具有良好的刚性和耐久性。芯轴：——采用高强度的铝合金材料...</p>
+                </a>
+            </li>
+            {% endfor %}
+           
+        </ul>
+        <div class="clear"></div>
+    </div>
+   <script type="text/javascript">
+     $(function () {
+            
+           $(".pro_list li").hover(function(){$(".pro_lay",this).stop();$(this).addClass("pro_hover");$(this).find(".pro_lay").animate({"top":0},200)},function(){$(".pro_lay",this).stop();$(this).removeClass("pro_hover");$(this).find(".pro_lay").animate({"top":-270},200)});	
+         });
+    </script>
+	
+	</div>
+      <div class="c"></div>
+  </div>
+ </div>
+</div>
+
+{{ http.1| safe }}
+</body>
+</html>
